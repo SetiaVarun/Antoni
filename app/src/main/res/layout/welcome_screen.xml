@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/bg"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+                                                        <!--        logo          -->
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="@dimen/_75dp"
+        android:layout_height="@dimen/_88dp"
+        android:layout_marginBottom="@dimen/_80dp"
+        android:layout_marginTop="@dimen/_46dp"
+        android:background="@drawable/logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/txtSignupLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_4dp"
+        android:text="Sign up or Login for FREE"
+        android:textColor="@color/colorWhite"
+        android:textSize="12.4sp"
+        app:layout_constraintBottom_toTopOf="@+id/layoutButtons"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgLogo"
+        app:layout_constraintVertical_bias="0.81" />
+                                                            <!--        Button Layout       -->
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/layoutButtons"
+        android:layout_width="@dimen/_270dp"
+        android:layout_height="@dimen/_224dp"
+        android:layout_marginTop="@dimen/_31dp"
+        android:background="@drawable/bg_rectangle"
+        app:layout_constraintBottom_toTopOf="@+id/txtSignin"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <!--    Facebook Custom Button      -->
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/layoutBtnFacebook"
+            android:layout_width="@dimen/_219dp"
+            android:layout_height="@dimen/_40dp"
+            android:layout_marginTop="@dimen/_32dp"
+            android:background="@color/colorBlue"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imgFb"
+                android:layout_width="@dimen/_7dp"
+                android:layout_height="@dimen/_17dp"
+                android:layout_marginLeft="@dimen/_20dp"
+                android:layout_marginRight="@dimen/_191dp"
+                android:background="@drawable/facebook"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_22dp"
+                android:text="Continue with Facebook"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="12.6sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/imgFb"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+
+        <!--       Google Custom Button       -->
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/layoutBtnGoogle"
+            android:layout_width="@dimen/_219dp"
+            android:layout_height="@dimen/_40dp"
+            android:layout_marginTop="@dimen/_16dp"
+            android:background="@color/colorRed"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layoutBtnFacebook">
+
+            <ImageView
+                android:id="@+id/imgGoogle"
+                android:layout_width="@dimen/_17dp"
+                android:layout_height="@dimen/_17dp"
+                android:layout_marginLeft="@dimen/_20dp"
+                android:layout_marginRight="@dimen/_191dp"
+                android:background="@drawable/google"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_17dp"
+                android:text="Continue with Google"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="12.6sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/imgGoogle"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+
+        <!--       View group       -->
+
+        <View
+            android:id="@+id/viewRight"
+            android:layout_width="@dimen/_102dp"
+            android:layout_height="@dimen/_1dp"
+            android:layout_marginRight="@dimen/_26dp"
+            android:layout_marginTop="@dimen/_14dp"
+            android:background="@color/colorWhite"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layoutBtnGoogle" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_9dp"
+            android:text="or"
+            android:textColor="@color/colorWhite"
+            android:textSize="9.5sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layoutBtnGoogle" />
+
+        <View
+            android:id="@+id/viewLeft"
+            android:layout_width="@dimen/_102dp"
+            android:layout_height="@dimen/_1dp"
+            android:layout_marginLeft="@dimen/_26dp"
+            android:layout_marginTop="@dimen/_14dp"
+            android:background="@color/colorWhite"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layoutBtnGoogle" />
+
+
+        <!--    Custom Signin Buttom    -->
+
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/layoutBtnSignin"
+            android:layout_width="@dimen/_219dp"
+            android:layout_height="@dimen/_40dp"
+            android:layout_marginTop="@dimen/_13dp"
+            android:background="@color/colorGrey"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewLeft"
+            app:layout_goneMarginTop="@dimen/_28dp">
+
+            <ImageView
+                android:id="@+id/imgMail"
+                android:layout_width="@dimen/_17dp"
+                android:layout_height="@dimen/_13dp"
+                android:layout_marginLeft="@dimen/_20dp"
+                android:layout_marginRight="@dimen/_191dp"
+                android:background="@drawable/email_white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_18dp"
+                android:layout_marginRight="@dimen/_34dp"
+                android:text="Sign up with Email"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="12.6sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_goneMarginLeft="@dimen/_18dp" />
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.constraint.ConstraintLayout>
+                                                                <!--     login Textview      -->
+    <TextView
+        android:id="@+id/txtSignin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_30dp"
+        android:text="Already Have an Account ? Login Here "
+        android:textColor="#FFF"
+        android:textSize="@dimen/_12dp"
+        app:layout_constraintBottom_toTopOf="@+id/txtSignup"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/txtSignup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_8dp"
+        android:text="2017 © Antoni Ipsum is a dummy text used in market for printing"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/_8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+</android.support.constraint.ConstraintLayout>
